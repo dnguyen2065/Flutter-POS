@@ -1,3 +1,5 @@
+import 'dart:math';
+
 import 'package:flutter/material.dart';
 
 void main() {
@@ -10,7 +12,64 @@ class MyApp extends StatelessWidget {
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
-    
+    return MaterialApp(
+      home: Scaffold(
+        appBar: AppBar(actions: [
+          ElevatedButton(
+            onPressed: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(
+                  builder: (context) => const MyHomePage(
+                    title: 'analbeads',
+                  ),
+                ),
+              );
+            },
+            child: const Icon(
+              Icons.arrow_back_ios,
+              color: Colors.green,
+            ),
+          ),
+        ]),
+        body: Column(
+          mainAxisAlignment: MainAxisAlignment.start,
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: const [
+                Text("asd!"),
+              ],
+            ),
+            Column(
+              children: [
+                ElevatedButton(
+                  onPressed: () {},
+                  child: const Text("Button"),
+                ),
+                ElevatedButton(
+                  onPressed: () {},
+                  child: const Text("Button"),
+                ),
+                ElevatedButton(
+                  onPressed: () {},
+                  child: const Text("Button"),
+                ),
+                ElevatedButton(
+                  onPressed: () {},
+                  child: const Text("Button"),
+                ),
+                ElevatedButton(
+                  onPressed: () {},
+                  child: const Text("Button"),
+                ),
+              ],
+            )
+          ],
+        ),
+      ),
+    );
   }
 }
 
@@ -48,6 +107,19 @@ class _MyHomePageState extends State<MyHomePage> {
 
   @override
   Widget build(BuildContext context) {
-    
+    return Scaffold(
+      body: Column(
+        children: const [
+          Material(
+            color: Colors.red,
+            child: SizedBox(
+              width: 20,
+              height: 20,
+            ),
+          ),
+          Text("Welcome!"),
+        ],
+      ),
+    );
   }
 }
