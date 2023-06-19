@@ -8,48 +8,108 @@ void main() {
 
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
-
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
       home: Scaffold(
+        backgroundColor: const Color(0xff222222),
         body: Column(
-          mainAxisAlignment: MainAxisAlignment.start,
-          crossAxisAlignment: CrossAxisAlignment.start,
+          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+          crossAxisAlignment: CrossAxisAlignment.center,
           children: [
-            Text("Flutter POS",
-                style: GoogleFonts.roboto(
-                    fontSize: 12,
+            Stack(
+              alignment: Alignment.center,
+              children: [
+                Container(
+                  height: 100,
+                  width: 1920,
+                  color: const Color(0xff0D3b66),
+                ),
+                Text(
+                  "Flutter POS",
+                  style: GoogleFonts.roboto(
+                    fontSize: 48,
                     fontWeight: FontWeight.bold,
-                    color: const Color.fromARGB(1, 164, 255, 164))),
-            Row(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: const [
-                Text("asd!"),
+                    color: const Color(0xffd1d1d1),
+                  ),
+                ),
               ],
             ),
-            Column(
+            Row(
+              children: [],
+            ),
+            Row(
+              children: [],
+            ),
+            Stack(
+              alignment: Alignment.center,
               children: [
-                ElevatedButton(
-                  onPressed: () {},
-                  child: const Text("Button"),
+                Container(
+                  height: 80,
+                  width: 1920,
+                  color: const Color(0xff0D3b66),
                 ),
-                ElevatedButton(
-                  onPressed: () {},
-                  child: const Text("Button"),
-                ),
-                ElevatedButton(
-                  onPressed: () {},
-                  child: const Text("Button"),
-                ),
-                ElevatedButton(
-                  onPressed: () {},
-                  child: const Text("Button"),
-                ),
-                ElevatedButton(
-                  onPressed: () {},
-                  child: const Text("Button"),
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    ElevatedButton(
+                      onPressed: () {
+                        //TODO: move to page
+                      },
+                      style: ButtonStyle(
+                        padding: MaterialStateProperty.all(EdgeInsets.zero),
+                        fixedSize: MaterialStateProperty.all(Size(70, 70)),
+                        backgroundColor:
+                            MaterialStateProperty.all(const Color(0xfff95738)),
+                        shape: MaterialStateProperty.all(
+                          RoundedRectangleBorder(
+                            borderRadius: BorderRadius.circular(10),
+                          ),
+                        ),
+                      ),
+                      child: Text(
+                        "Admin",
+                        style: GoogleFonts.roboto(
+                          fontSize: 20,
+                          fontWeight: FontWeight.w900,
+                          color: const Color(0xffffffff),
+                        ),
+                      ),
+                    ),
+                    Text(
+                      "Your Business",
+                      style: GoogleFonts.roboto(
+                        fontSize: 40,
+                        fontWeight: FontWeight.bold,
+                        color: const Color(0xffd1d1d1),
+                      ),
+                    ),
+                    ElevatedButton(
+                      onPressed: () {
+                        //TODO: move to page
+                      },
+                      style: ButtonStyle(
+                        padding: MaterialStateProperty.all(EdgeInsets.zero),
+                        fixedSize: MaterialStateProperty.all(Size(70, 70)),
+                        backgroundColor:
+                            MaterialStateProperty.all(const Color(0xfff95738)),
+                        shape: MaterialStateProperty.all(
+                          RoundedRectangleBorder(
+                            borderRadius: BorderRadius.circular(10),
+                          ),
+                        ),
+                      ),
+                      child: Text(
+                        "Exit",
+                        style: GoogleFonts.roboto(
+                          fontSize: 20,
+                          fontWeight: FontWeight.w900,
+                          color: const Color(0xffffffff),
+                        ),
+                      ),
+                    ),
+                  ],
                 ),
               ],
             )
