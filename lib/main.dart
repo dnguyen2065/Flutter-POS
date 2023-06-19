@@ -1,5 +1,5 @@
 import 'dart:math';
-
+import 'package:google_fonts/google_fonts.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -14,28 +14,15 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       home: Scaffold(
-        appBar: AppBar(actions: [
-          ElevatedButton(
-            onPressed: () {
-              Navigator.push(
-                context,
-                MaterialPageRoute(
-                  builder: (context) => const MyHomePage(
-                    title: 'analbeads',
-                  ),
-                ),
-              );
-            },
-            child: const Icon(
-              Icons.arrow_back_ios,
-              color: Colors.green,
-            ),
-          ),
-        ]),
         body: Column(
           mainAxisAlignment: MainAxisAlignment.start,
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
+            Text("Flutter POS",
+                style: GoogleFonts.roboto(
+                    fontSize: 12,
+                    fontWeight: FontWeight.bold,
+                    color: const Color.fromARGB(1, 164, 255, 164))),
             Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: const [
